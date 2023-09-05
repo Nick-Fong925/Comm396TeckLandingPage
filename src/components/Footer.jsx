@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-blue-950 text-white fixed bottom-0 w-full">
-      <div className="flex flex-col items-center justify-center md:flex-row justify-betweenmd: container mx-auto flex justify-between items-center">
-        <div>
+    <footer className="bg-blue-950 text-white w-full py-6">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full md:w-auto">
           <img src={CapLogo} alt="Cap Logo" className="pl-10 w-44 h-auto" />
         </div>
-        <div className="flex space-x-4">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
           <Link
             to="/"
             className="font-extrabold text-white hover:text-green-400"
@@ -30,7 +30,7 @@ function Footer() {
             CONTACT
           </Link>
         </div>
-        <div className="text-center">
+        <div className="text-center md:text-left mt-4 md:mt-0">
           <h4 className="text-lg font-semibold mb-2">
             Sign up for our Newsletter
           </h4>
@@ -51,7 +51,7 @@ function Footer() {
           </form>
         </div>
 
-        <div className="text-center md:text-right">
+        <div className="text-center md:text-right mt-4 md:mt-0">
           <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
           <div className="flex space-x-4">
             <a

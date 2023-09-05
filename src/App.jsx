@@ -1,7 +1,11 @@
-import React from "react";
+import TeamPage from "../src/pages/TeamPage.jsx";
 
 function App() {
-  return <React.Fragment>hi</React.Fragment>;
+  return (
+    <>
+      <TeamPage />
+    </>
+  );
 }
 
 export default App;
