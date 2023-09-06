@@ -1,40 +1,50 @@
-import NicholasFong from "../assets/OurTeam/NicholasFong.jpg";
-import LinkedIn from "../assets/socialmedia/LinkedIn.png";
-import Gmail from "../assets/socialmedia/Gmail.png";
+import GmailIcon from "../assets/socialmedia/Gmail.png";
+import LinkedInIcon from "../assets/socialmedia/LinkedIn.png";
+import PropTypes from "prop-types";
 
-function IndividualTeamMember() {
+function IndividualTeamMember({
+  Name,
+  Position,
+  TeamImage,
+  Specialization,
+  Gmail,
+  LinkedIn,
+}) {
   return (
     <div className="text-white bg-blue-950 p-14 md:w-1/2">
       <div className="md:flex md:items-center">
-        <div className="w-32 h-32 rounded-full overflow-hidden md:mr-4 hover:">
+        <div className="w-32 h-40 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500">
           <img
-            src={NicholasFong}
-            alt={`Nick's Profile`}
+            src={TeamImage}
+            alt={`${Name}'s Profile`}
             className="w-full h-full object-cover"
           />
         </div>
         <div className="md:w-3/4 mt-4 md:mt-0">
-          <h2 className="text-3xl font-extrabold mb-2">Technology Director</h2>
-          <p className="text-lg font-bold mb-2">Nicholas Fong</p>
+          <p className="text-3xl font-bold mb-2">{Name}</p>
+          <h2 className="text-lg font-extrabold mb-2 text-lime-400">
+            {Position}
+          </h2>
+
           <p className="text-base font-semibold">
-            <span className=" font-bold text-lg">Specialization:</span>
+            <span className=" font-bold text-m">Specialization: </span>
+            {Specialization}
           </p>
-          <p className="font-semibold">Business and Computer Science</p>
-          <div className="flex mt-2">
+          <div className="flex mt-4">
             <a
-              href="https://www.linkedin.com/"
+              href={LinkedIn}
               target="_blank"
               rel="noopener noreferrer"
               className="mr-4"
             >
-              <img src={LinkedIn} alt="LinkedIn Icon" className="w-6 h-6" />
+              <img src={LinkedInIcon} alt="LinkedIn Icon" className="w-6 h-6" />
             </a>
             <a
-              href="mailto:example@gmail.com"
+              href={`mailto:${Gmail}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={Gmail} alt="Gmail Icon" className="w-6 h-6" />
+              <img src={GmailIcon} alt="Gmail Icon" className="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -42,5 +52,14 @@ function IndividualTeamMember() {
     </div>
   );
 }
+
+IndividualTeamMember.propTypes = {
+  Name: PropTypes.string.isRequired,
+  Position: PropTypes.string.isRequired,
+  TeamImage: PropTypes.node.isRequired, // Adjusted the PropTypes type to "node"
+  Specialization: PropTypes.string.isRequired,
+  Gmail: PropTypes.string.isRequired,
+  LinkedIn: PropTypes.string.isRequired,
+};
 
 export default IndividualTeamMember;

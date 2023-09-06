@@ -39,7 +39,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-blue-950 shadow-lg z-50">
+    <header className="fixed top-0 left-0 right-0 bg-blue-950 shadow-lg z-50 -mb-10">
       <nav className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <Link
@@ -72,25 +72,16 @@ function Header() {
                     className="block px-4 py-2 text-black font-semibold hover:bg-gray-100"
                     onClick={scrollToTop}
                   >
-                    EVENT1
+                    Past Events
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/MelonaStory"
-                    className="block px-4 py-2 text-black font-semibold hover:bg-gray-100"
+                    className="block px-4 py-2 text-white font-semibold hover:bg-gray-100"
                     onClick={scrollToTop}
                   >
-                    EVENT2
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/PhotoGallery"
-                    className="block px-4 py-2 text-black font-semibold hover:bg-gray-100"
-                    onClick={scrollToTop}
-                  >
-                    EVENT3
+                    Upcoming Events
                   </Link>
                 </li>
               </ul>
@@ -98,7 +89,7 @@ function Header() {
           </li>
           <li className="relative group group-hover:block">
             <Link
-              to="/"
+              to="/TeamPage"
               className="text-white font-extrabold  hover:text-green-400"
               onClick={scrollToTop}
             >

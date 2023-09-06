@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-blue-950 text-white w-full py-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <footer className="bg-blue-950 text-white w-full">
+      <div className="mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-auto">
           <img src={CapLogo} alt="Cap Logo" className="pl-10 w-44 h-auto" />
         </div>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        <div className="flex space-x-4">
           <Link
             to="/"
             className="font-extrabold text-white hover:text-green-400"
@@ -18,19 +18,19 @@ function Footer() {
             EVENTS
           </Link>
           <Link
-            to="/about"
+            to="/TeamPage"
             className="font-extrabold text-white hover:text-green-400"
           >
             TEAM
           </Link>
           <Link
-            to="/contact"
+            to="/Contact"
             className="font-extrabold text-white hover:text-green-400"
           >
             CONTACT
           </Link>
         </div>
-        <div className="text-center md:text-left mt-4 md:mt-0">
+        <div className="text-center">
           <h4 className="text-lg font-semibold mb-2">
             Sign up for our Newsletter
           </h4>
@@ -39,7 +39,7 @@ function Footer() {
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                className="border border-gray-400 px-2 py-1 md:mr-2 rounded hover:border-red-600 mb-2 md:mb-0"
+                className="border border-gray-400 px-2 py-1 md:mr-2 rounded hover:border-lime-500 mb-2 md:mb-0"
               />
               <button
                 type="submit"
@@ -51,7 +51,7 @@ function Footer() {
           </form>
         </div>
 
-        <div className="text-center md:text-right mt-4 md:mt-0">
+        <div className="text-center md:text-right">
           <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
           <div className="flex space-x-4">
             <a
