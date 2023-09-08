@@ -1,5 +1,6 @@
+import LandingMission from "../components/LandingMission";
 function Landing() {
-  return <div>Landing</div>;
+  return <LandingMission />;
 }
 
 export default Landing;

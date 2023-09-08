@@ -1,5 +1,4 @@
 import { useState } from "react";
-import CapTeam from "../assets/GroupPhotos/CapTeam.jpg";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -7,14 +6,10 @@ function Contact() {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="pt-28 flex flex-col md:flex-row">
-      <div className="hidden lg:block w-full h-auto">
-        <img src={CapTeam} className="object-cover h-full" alt="melona bars" />
-      </div>
-
+    <div className="min-h-screen pt-28 flex flex-col md:flex-row bg-blue-950">
       {/* Contact Form section */}
       <div className="w-full md:w-1/2 bg-blue-950 p-8">
-        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-white">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-lime-400">
           Contact Us
         </h1>
         <h2 className="text-white text-base md:text-m leading-8 mt-4 ">

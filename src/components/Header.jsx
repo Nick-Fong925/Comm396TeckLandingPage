@@ -39,8 +39,8 @@ function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-blue-950 shadow-lg z-50 -mb-10">
-      <nav className="container mx-auto flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 bg-blue-950 shadow-lg z-50">
+      <nav className="container mx-auto flex items-center justify-between h-20">
         <div className="flex items-center">
           <Link
             to="/"
@@ -59,17 +59,17 @@ function Header() {
           >
             <Link
               to="/"
-              className="text-white font-extrabold  hover:text-green-400"
+              className="text-white font-extrabold  hover:text-lime-400"
               onClick={scrollToTop}
             >
               EVENTS
             </Link>
             {showOurEventsDropdown && (
-              <ul className="absolute py-2 bg-white border rounded-lg shadow-lg w-full">
+              <ul className="absolute py-2 bg-blue-950 w-6/2">
                 <li>
                   <Link
                     to="/BingStory"
-                    className="block px-4 py-2 text-black font-semibold hover:bg-gray-100"
+                    className="block px-4 py-2 text-white sfont-semibold hover:bg-lime-400"
                     onClick={scrollToTop}
                   >
                     Past Events
@@ -78,7 +78,7 @@ function Header() {
                 <li>
                   <Link
                     to="/MelonaStory"
-                    className="block px-4 py-2 text-white font-semibold hover:bg-gray-100"
+                    className="block px-4 py-2 text-white font-semibold hover:bg-lime-400"
                     onClick={scrollToTop}
                   >
                     Upcoming Events
@@ -90,7 +90,7 @@ function Header() {
           <li className="relative group group-hover:block">
             <Link
               to="/TeamPage"
-              className="text-white font-extrabold  hover:text-green-400"
+              className="text-white font-extrabold  hover:text-lime-400"
               onClick={scrollToTop}
             >
               OUR TEAM
@@ -99,7 +99,7 @@ function Header() {
           <li className="relative group group-hover:block">
             <Link
               to="/Contact"
-              className="text-white font-extrabold  hover:text-green-400"
+              className="text-white font-extrabold  hover:text-lime-400"
               onClick={scrollToTop}
             >
               CONTACT US
@@ -136,7 +136,7 @@ function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed top-0 left-0 w-full h-full bg-white border-l border-gray-200 shadow-lg p-4 transform transition-transform duration-300 ${
+          className={`md:hidden fixed top-0 left-0 w-full h-full bg-blue-950 border-l border-gray-200 shadow-lg p-4 transform transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -160,67 +160,61 @@ function Header() {
             </svg>
           </button>
           {/* Menu Items */}
-          <ul className="flex flex-col space-y-4 mt-10">
+          <ul className="flex flex-col space-y-2 mt-10">
             <li>
               <Link
                 to="/"
-                className="text-black font-bold  hover:text-green-400"
+                className="text-black font-bold  hover:text-lime-400"
+                onClick={toggleMobileMenu}
+              ></Link>
+            </li>
+            <li>
+              <Link
+                to="/TeamPage"
+                className="text-white font-bold  hover:text-lime-400"
                 onClick={toggleMobileMenu}
               >
-                HOME
+                Our Team
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/Contact"
+                className="text-white font-bold  hover:text-lime-400"
+                onClick={toggleMobileMenu}
+              >
+                Contact Us
               </Link>
             </li>
             <li className="relative group">
               <button
-                className="text-black font-bold  hover:text-green-400"
+                className="text-white font-bold  hover:text-lime-400"
                 onClick={handleAboutUsDropdown}
               >
-                EVENTS
+                Events
               </button>
               {showOurEventsDropdown && (
                 <ul className="ml-4 space-y-2">
                   <li>
                     <Link
                       to="/BingStory"
-                      className="block text-black font-semibold hover:text-gray-500"
+                      className="block text-white font-semibold hover:text-gray-500"
                       onClick={toggleMobileMenu}
                     >
-                      Binggrae
+                      Upcoming Evemts
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/MelonaStory"
-                      className="block text-black font-semibold hover:text-gray-500"
+                      className="block text-white font-semibold hover:text-gray-500"
                       onClick={toggleMobileMenu}
                     >
-                      Melona
+                      Past Events
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      to="PhotoGallery"
-                      className="block text-black font-semibold hover:text-gray-500"
-                      onClick={toggleMobileMenu}
-                    >
-                      Our Gallery
-                    </Link>
-                  </li>
-                  {/* Add more story categories as needed */}
                 </ul>
               )}
-            </li>
-            <li className="relative group">
-              <button className="text-black font-bold hover-animation"></button>
-            </li>
-            <li>
-              <Link
-                to="/Contact"
-                className="text-black font-bold  hover:text-green-400"
-                onClick={toggleMobileMenu}
-              >
-                CONTACT US
-              </Link>
             </li>
           </ul>
         </div>

@@ -1,11 +1,5 @@
-import TeamPage from "../src/pages/TeamPage.jsx";
-
 function App() {
-  return (
-    <>
-      <TeamPage />
-    </>
-  );
+  return <></>;
 }
 
 export default App;

@@ -1,9 +1,28 @@
+import { useEffect } from "react";
 import CapLogo from "../assets/Header/CapLogoWhite.png";
 import instagramIcon from "../assets/socialmedia/instagram.png";
 import tiktokIcon from "../assets/socialmedia/tiktok.png";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Add an event listener to all links to scroll to the top
+  const addScrollToTopEventListener = () => {
+    const links = document.querySelectorAll("Link");
+
+    links.forEach((link) => {
+      link.addEventListener("click", scrollToTop);
+    });
+  };
+
+  // Call the function when the component mounts
+  useEffect(() => {
+    addScrollToTopEventListener();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <footer className="bg-blue-950 text-white w-full">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -14,18 +33,21 @@ function Footer() {
           <Link
             to="/"
             className="font-extrabold text-white hover:text-green-400"
+            onClick={scrollToTop}
           >
             EVENTS
           </Link>
           <Link
             to="/TeamPage"
             className="font-extrabold text-white hover:text-green-400"
+            onClick={scrollToTop}
           >
             TEAM
           </Link>
           <Link
             to="/Contact"
             className="font-extrabold text-white hover:text-green-400"
+            onClick={scrollToTop}
           >
             CONTACT
           </Link>

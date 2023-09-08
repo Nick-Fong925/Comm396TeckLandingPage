@@ -9,6 +9,7 @@ function IndividualTeamMember({
   Specialization,
   Gmail,
   LinkedIn,
+  Intended, // Add the 'Intended' prop
 }) {
   return (
     <div className="text-white bg-blue-950 p-14 md:w-1/2">
@@ -27,7 +28,13 @@ function IndividualTeamMember({
           </h2>
 
           <p className="text-base font-semibold">
-            <span className=" font-bold text-m">Specialization: </span>
+            {Intended ? (
+              <span className=" font-bold text-m">
+                Intended Specialization:{" "}
+              </span>
+            ) : (
+              <span className=" font-bold text-m">Specialization: </span>
+            )}
             {Specialization}
           </p>
           <div className="flex mt-4">
@@ -56,10 +63,15 @@ function IndividualTeamMember({
 IndividualTeamMember.propTypes = {
   Name: PropTypes.string.isRequired,
   Position: PropTypes.string.isRequired,
-  TeamImage: PropTypes.node.isRequired, // Adjusted the PropTypes type to "node"
+  TeamImage: PropTypes.node.isRequired,
   Specialization: PropTypes.string.isRequired,
   Gmail: PropTypes.string.isRequired,
   LinkedIn: PropTypes.string.isRequired,
+  Intended: PropTypes.bool, // Specify 'Intended' prop as a boolean (default is false)
+};
+
+IndividualTeamMember.defaultProps = {
+  Intended: false, // Set the default value of 'Intended' to false
 };
 
 export default IndividualTeamMember;

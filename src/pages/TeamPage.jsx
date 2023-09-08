@@ -35,9 +35,9 @@ function TeamPage() {
     Name: "Amy Yin",
     Position: "Regional Coordinator",
     TeamImage: AmyYin,
-    Specialization: "",
-    Gmail: "amy@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/amyyin",
+    Specialization: "Organizational Behaviour and Human Resources",
+    Gmail: "amy.yin@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/amywyin/",
   };
 
   const AshvikaAhujaObject = {
@@ -53,17 +53,17 @@ function TeamPage() {
     Name: "Austin Cu",
     Position: "Regional Coordinator",
     TeamImage: AustinCu,
-    Specialization: "",
-    Gmail: "austin@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/austincu",
+    Specialization: "Operations Logistics and Accounting",
+    Gmail: "Austin.cu@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/austin-cu-a91676170",
   };
 
   const AzaadOmerObject = {
     Name: "Azaad Omer",
     Position: "Vice Chair",
     TeamImage: AzaadOmer,
-    Specialization: "Event Planning",
-    Gmail: "azaad@gmail.com",
+    Specialization: "Accounting",
+    Gmail: "azaad.omer@cus.ca",
     LinkedIn: "https://www.linkedin.com/in/azaadomer",
   };
 
@@ -89,9 +89,9 @@ function TeamPage() {
     Name: "Hannah Lee",
     Position: "Regional Coordinator",
     TeamImage: HannahLee,
-    Specialization: "",
-    Gmail: "hannah@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/hannahlee",
+    Specialization: "Marketing",
+    Gmail: "hannah.lee@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/ihannahlee/",
   };
 
   const KatelynYueObject = {
@@ -99,8 +99,8 @@ function TeamPage() {
     Position: "Chair",
     TeamImage: KatelynYue,
     Specialization: "Finance",
-    Gmail: "katelyn@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/katelynyue",
+    Gmail: "katelyn.yue@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/katelyn-yue/",
   };
 
   const MichellePengObject = {
@@ -108,8 +108,8 @@ function TeamPage() {
     Position: "Creative Director",
     TeamImage: MichellePeng,
     Specialization: "Marketing",
-    Gmail: "michelle@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/michellepeng",
+    Gmail: "michelle.peng@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/michellepeng15/",
   };
 
   const NainikaSanghviObject = {
@@ -125,9 +125,9 @@ function TeamPage() {
     Name: "Sarah Yang",
     Position: "Regional Coordinator",
     TeamImage: SarahYang,
-    Specialization: "",
-    Gmail: "sarah@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/sarahyang",
+    Specialization: "Accounting",
+    Gmail: "sara.yang@cus.ca",
+    LinkedIn: "https://www.linkedin.com/in/sara-y-520a73243",
   };
 
   const SimarDhillonObject = {
@@ -283,6 +283,7 @@ function TeamPage() {
                   Specialization={AmyYinObject.Specialization}
                   Gmail={AmyYinObject.Gmail}
                   LinkedIn={AmyYinObject.LinkedIn}
+                  Intended={true}
                 />
                 <IndividualTeamMember
                   Name={AshvikaAhujaObject.Name}
@@ -299,6 +300,7 @@ function TeamPage() {
                   Specialization={AustinCuObject.Specialization}
                   Gmail={AustinCuObject.Gmail}
                   LinkedIn={AustinCuObject.LinkedIn}
+                  Intended={true}
                 />
                 <IndividualTeamMember
                   Name={HannahLeeObject.Name}
@@ -323,6 +325,7 @@ function TeamPage() {
                   Specialization={SarahYangObject.Specialization}
                   Gmail={SarahYangObject.Gmail}
                   LinkedIn={SarahYangObject.LinkedIn}
+                  Intended={true}
                 />
               </>
             )}
