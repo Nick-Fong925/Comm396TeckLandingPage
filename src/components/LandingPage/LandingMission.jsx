@@ -3,8 +3,8 @@ import CapTeam from "../../assets/GroupPhotos/CapTeam.jpg";
 function LandingMission() {
   return (
     <div className="bg-gray-100 py-24 lg:py-16">
-      <div className="container mx-auto px-4 lg:flex lg:flex-row lg:items-center">
-        <div className="lg:w-1/2">
+      <div className="container mx-auto px-4 md:flex flex-row items-center">
+        <div className="md:w-1/2">
           <h1 className="text-xl text-lime-400 lg:text-3xl font-semibold mb-2">
             Our mission
           </h1>
@@ -20,7 +20,7 @@ function LandingMission() {
             success at Sauder.
           </p>
         </div>
-        <div className="lg:w-1/2 mt-4 lg:mt-0 lg:ml-10">
+        <div className="mt-6 mr-12 md:w-1/2 mt-0 ml-10">
           <img
             src={CapTeam}
             alt="Mission"

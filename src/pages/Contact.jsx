@@ -5,35 +5,61 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let valid = true;
 
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
-    };
+    if (name === "") {
+      setNameError("Name is required.");
+      valid = false;
+    } else {
+      setNameError("");
+    }
 
-    emailjs
-      .send(
-        "service_k4uk2c4",
-        "template_jb3sbq6",
-        templateParams,
-        "BeR1A5o70hui-9_qq"
-      )
-      .then((response) => {
-        console.log("Email sent successfully!", response.text);
+    if (email === "") {
+      setEmailError("Email is required.");
+      valid = false;
+    } else {
+      setEmailError("");
+    }
 
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => {
-        console.error("Error sending email:", error);
-      });
+    if (message === "") {
+      setMessageError("Message is required.");
+      valid = false;
+    } else {
+      setMessageError("");
+    }
+
+    if (valid) {
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          "service_k4uk2c4",
+          "template_jb3sbq6",
+          templateParams,
+          "BeR1A5o70hui-9_qq"
+        )
+        .then((response) => {
+          console.log("Email sent successfully!", response.text);
+
+          setName("");
+          setEmail("");
+          setMessage("");
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+        });
+    }
   };
-
 
   return (
     <div className="min-h-screen pt-28 flex flex-col md:flex-row bg-blue-950">
@@ -44,7 +70,7 @@ function Contact() {
         </h1>
         <h2 className="text-white text-base md:text-m leading-8 mt-4 ">
           Please feel free to contact us any time if you have any questions
-          about upcoming or previous evemts. The CAP Team is always here to
+          about upcoming or previous events. The CAP Team is always here to
           assist!
         </h2>
         <form className="space-y-4 mt-8" onSubmit={handleSubmit}>
@@ -59,6 +85,7 @@ function Contact() {
               placeholder="Name"
               required
             />
+            <span className="text-red-500">{nameError}</span>
           </div>
 
           {/* Email input */}
@@ -72,6 +99,7 @@ function Contact() {
               placeholder="Email"
               required
             />
+            <span className="text-red-500">{emailError}</span>
           </div>
 
           {/* Message input */}
@@ -85,6 +113,7 @@ function Contact() {
               placeholder="Message"
               required
             />
+            <span className="text-red-500">{messageError}</span>
           </div>
 
           {/* Submit button */}
@@ -101,3 +130,5 @@ function Contact() {
 }
 
 export default Contact;
+
+

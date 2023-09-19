@@ -6,16 +6,16 @@ import { Link } from "react-router-dom";
 function LandingEvents() {
   return (
     <div className="bg-black py-24 lg:py-16">
-      <div className="container mx-auto px-4 lg:flex lg:flex-row lg:items-center">
-        <div className="lg:w-1/2 lg:mr-10"> {/* Swap this with the image div */}
+      <div className="container mx-auto px-4 md:flex flex-row items-center">
+        <div className="ml-6 md:w-1/2 mr-10"> {/* Swap this with the image div */}
           <img
             src={CapEvent1}
             alt="Mission"
             className="w-full h-auto rounded-lg mr-0 md:mr-10"
           />
         </div>
-        <div className="lg:w-1/2">
-          <h1 className="text-xl text-lime-400 lg:text-3xl font-semibold mb-2 mt-10 ">
+        <div className="md:w-1/2">
+          <h1 className=" text-lime-400  font-semibold mb-2 mt-10 lg:text-xl">
             Brought to You by CAP
           </h1>
           <h2 className="text-2xl lg:text-4xl font-medium mb-5 text-white">
