@@ -149,10 +149,9 @@ function TeamPage() {
   };
 
   return (
-    <div className="bg-blue-950 md:pt-28">
-      <div className="min-h-screen ">
-        <div className="p-4">
-          <div className="flex flex-col items-center">
+    <div className="bg-blue-950 min-h-screen flex flex-col justify-center items-center pt-20">
+    <div className="p-4 max-w-screen-lg">
+      <div className="flex flex-col items-center">
             <h2 className="pt-30 text-4xl md:text-6xl font-bold text-white mb-3 md:mb-5">
               Our Team
             </h2>
@@ -177,16 +176,7 @@ function TeamPage() {
             >
               Leadership
             </button>
-            <button
-              className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
-                activeCategory === "Directors"
-                  ? "bg-lime-500 text-white"
-                  : "bg-white text-blue-950"
-              }`}
-              onClick={() => handleCategoryClick("Directors")}
-            >
-              Directors
-            </button>
+         
             <button
               className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
                 activeCategory === "Regional Co-ordinators"
@@ -218,12 +208,9 @@ function TeamPage() {
                   Specialization={AzaadOmerObject.Specialization}
                   Gmail={AzaadOmerObject.Gmail}
                   LinkedIn={AzaadOmerObject.LinkedIn}
+                  
                 />
-              </>
-            )}
-            {activeCategory === "Directors" && (
-              <>
-                <IndividualTeamMember
+                  <IndividualTeamMember
                   Name={NicholasFongObject.Name}
                   Position={NicholasFongObject.Position}
                   TeamImage={NicholasFongObject.TeamImage}
@@ -258,6 +245,7 @@ function TeamPage() {
                 />
               </>
             )}
+          
             {activeCategory === "Regional Co-ordinators" && (
               <>
                 <IndividualTeamMember
@@ -329,7 +317,6 @@ function TeamPage() {
                 />
               </>
             )}
-          </div>
         </div>
       </div>
     </div>
