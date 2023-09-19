@@ -1,10 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import CapLogo from "../assets/Header/CapLogoWhite.png";
 import instagramIcon from "../assets/socialmedia/instagram.png";
 import tiktokIcon from "../assets/socialmedia/tiktok.png";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 function Footer() {
+  const [email, setEmail] = useState("");
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -23,6 +25,36 @@ function Footer() {
     addScrollToTopEventListener();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+
+      from_email: email,
+
+    };
+
+    emailjs
+      .send(
+        "service_k4uk2c4",
+        "template_ml0v8n6",
+        templateParams,
+        "BeR1A5o70hui-9_qq"
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.text);
+
+
+        setEmail("");
+
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
+
+
   return (
     <footer className="bg-blue-950 text-white w-full">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -56,13 +88,17 @@ function Footer() {
           <h4 className="text-lg font-semibold mb-2">
             Sign up for our Newsletter
           </h4>
-          <form className="md:flex md:items-center md:justify-center">
+          <form className="md:flex md:items-center md:justify-center" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row items-center">
-              <input
-                type="email"
-                placeholder="Enter Email Address"
-                className="border border-gray-400 px-2 py-1 md:mr-2 rounded hover:border-lime-500 mb-2 md:mb-0"
-              />
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black py-2 px-2 mr-5  text-gray-800"
+              placeholder="Email"
+              required
+            />
               <button
                 type="submit"
                 className="bg-lime-500 text-white px-4 py-1 rounded font-bold"

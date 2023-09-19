@@ -1,9 +1,39 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    };
+
+    emailjs
+      .send(
+        "service_k4uk2c4",
+        "template_jb3sbq6",
+        templateParams,
+        "BeR1A5o70hui-9_qq"
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.text);
+
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
+
 
   return (
     <div className="min-h-screen pt-28 flex flex-col md:flex-row bg-blue-950">
@@ -17,7 +47,7 @@ function Contact() {
           about upcoming or previous evemts. The CAP Team is always here to
           assist!
         </h2>
-        <form className="space-y-4 mt-8">
+        <form className="space-y-4 mt-8" onSubmit={handleSubmit}>
           {/* Name input */}
           <div className="flex flex-col">
             <input
