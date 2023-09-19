@@ -1,4 +1,4 @@
-import CapTeam from "../assets/GroupPhotos/CapTeam.jpg";
+import CapTeam from "../../assets/GroupPhotos/CapTeam.jpg";
 
 function LandingMission() {
   return (

@@ -1,7 +1,9 @@
-import LandingMission from "../components/LandingMission";
-import LandingEvents from "../components/LandingEvents";
+import LandingMission from "../components/LandingPage/LandingMission";
+import LandingEvents from "../components/LandingPage/LandingEvents";
+import LandingCapInfo from "../components/LandingPage/LandingCapInfo";
+import HeaderImage from '../components/LandingPage/HeaderImage';
 function Landing() {
-  return (<><LandingMission /><LandingEvents/></>);
+  return (<><HeaderImage/><LandingMission /><LandingCapInfo/><LandingEvents/> </>);
 }
 
 export default Landing;

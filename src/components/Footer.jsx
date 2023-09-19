@@ -97,7 +97,7 @@ function Footer() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="-px-2 text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black  text-gray-800 lg:py-2 px-2 mr-5 "
+              className="-px-2 text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black  text-gray-800 md:py-1 px-2 mr-5 "
               placeholder="Email"
               required
             />

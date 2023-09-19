@@ -1,6 +1,6 @@
-import CapEvent1 from "../assets/GroupPhotos/CapEvent1.jpg";
-import instagramIcon from "../assets/socialmedia/instagram.png";
-import tiktokIcon from "../assets/socialmedia/tiktok.png";
+import CapEvent1 from "../../assets/GroupPhotos/CapEvent1.jpg";
+import instagramIcon from "../../assets/socialmedia/instagram.png";
+import tiktokIcon from "../../assets/socialmedia/tiktok.png";
 import { Link } from "react-router-dom";
 
 function LandingEvents() {
