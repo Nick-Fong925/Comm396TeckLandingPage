@@ -20,7 +20,7 @@ function LandingMission() {
             success at Sauder.
           </p>
         </div>
-        <div className="lg:w-1/2 mt-4 lg:mt-0 lg:ml-4">
+        <div className="lg:w-1/2 mt-4 lg:mt-0 lg:ml-10">
           <img
             src={CapTeam}
             alt="Mission"

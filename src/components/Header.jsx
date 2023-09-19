@@ -52,6 +52,7 @@ function Header() {
         </div>
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-16">
+          {/*}
           <li
             className="relative group group-hover:block"
             onMouseEnter={handleAboutUsDropdown}
@@ -87,6 +88,7 @@ function Header() {
               </ul>
             )}
           </li>
+            */}
           <li className="relative group group-hover:block">
             <Link
               to="/TeamPage"
@@ -99,7 +101,7 @@ function Header() {
           <li className="relative group group-hover:block">
             <Link
               to="/Contact"
-              className="text-white font-extrabold  hover:text-lime-400"
+              className="text-white font-extrabold  hover:text-lime-400 md:mr-10"
               onClick={scrollToTop}
             >
               CONTACT US

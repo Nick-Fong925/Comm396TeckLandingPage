@@ -59,9 +59,10 @@ function Footer() {
     <footer className="bg-blue-950 text-white w-full">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="w-full md:w-auto">
-          <img src={CapLogo} alt="Cap Logo" className="pl-10 w-44 h-auto" />
+          <img src={CapLogo} alt="Cap Logo" className="pl-10 w-44 h-auto ml-20 md:ml-0" />
         </div>
         <div className="flex space-x-4">
+          {/*}
           <Link
             to="/"
             className="font-extrabold text-white hover:text-green-400"
@@ -69,23 +70,24 @@ function Footer() {
           >
             EVENTS
           </Link>
+  */}
           <Link
             to="/TeamPage"
-            className="font-extrabold text-white hover:text-green-400"
+            className="font-extrabold text-white hover:text-green-400 text-xs lg:text-xl"
             onClick={scrollToTop}
           >
             TEAM
           </Link>
           <Link
             to="/Contact"
-            className="font-extrabold text-white hover:text-green-400"
+            className="font-extrabold text-white hover:text-green-400 text-xs lg:text-xl"
             onClick={scrollToTop}
           >
             CONTACT
           </Link>
         </div>
         <div className="text-center">
-          <h4 className="text-lg font-semibold mb-2">
+          <h4 className="text-s font-semibold mb-2 lg:text-lg">
             Sign up for our Newsletter
           </h4>
           <form className="md:flex md:items-center md:justify-center" onSubmit={handleSubmit}>
@@ -95,13 +97,13 @@ function Footer() {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black py-2 px-2 mr-5  text-gray-800"
+              className="-px-2 text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black  text-gray-800 lg:py-2 px-2 mr-5 "
               placeholder="Email"
               required
             />
               <button
                 type="submit"
-                className="bg-lime-500 text-white px-4 py-1 rounded font-bold"
+                className="bg-lime-500 text-white px-2 py-1 rounded font-bold lg:px-4"
               >
                 Subscribe
               </button>
@@ -109,7 +111,7 @@ function Footer() {
           </form>
         </div>
 
-        <div className="text-center md:text-right">
+        <div className="text-center md:mr-10 md:text-right">
           <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
           <div className="flex space-x-4">
             <a
