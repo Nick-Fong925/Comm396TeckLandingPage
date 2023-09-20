@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<Landing />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/TeamPage" element={<TeamPage />} />
+        <Route path="/CAPWeb/" element={<Landing />} />
       </Routes>
       <Footer />
     </React.StrictMode>
