@@ -54,7 +54,7 @@ function Footer() {
     <div className="bg-blue-950">
       <footer className="bg-blue-950 text-white py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:flex-row md:justify-between">
-          <div className="mb-6 md:mb-0">
+          <div className="md:mb-0">
             <img src={CapLogo} alt="Cap Logo" className="w-44 h-auto ml-0" />
           </div>
           <div className="flex flex-col items-center md:flex-row space-y-2 md:space-y-0 md:space-x-4">
