@@ -46,7 +46,7 @@ function TeamPage() {
     TeamImage: AshvikaAhuja,
     Specialization: "",
     Gmail: "ashvika@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/ashvikahuja",
+    LinkedIn: "https://www.linkedin.com/in/ashvikaahuja/",
   };
 
   const AustinCuObject = {
@@ -82,7 +82,7 @@ function TeamPage() {
     TeamImage: HaleyCorcoran,
     Specialization: "Accounting",
     Gmail: "haley@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/haleycorcoran",
+    LinkedIn: "https://www.linkedin.com/in/haleylcorcoran/",
   };
 
   const HannahLeeObject = {
@@ -136,7 +136,7 @@ function TeamPage() {
     TeamImage: SimarDhillon,
     Specialization: "Accounting",
     Gmail: "simar@gmail.com",
-    LinkedIn: "https://www.linkedin.com/in/simardhillon",
+    LinkedIn: "https://www.linkedin.com/in/deepsimar-dhillon/",
   };
 
   const ZachRaiObject = {
@@ -150,173 +150,172 @@ function TeamPage() {
 
   return (
     <div className="bg-blue-950 min-h-screen flex flex-col justify-center items-center pt-20">
-    <div className="p-4 max-w-screen-lg">
-      <div className="flex flex-col items-center">
-            <h2 className="pt-30 text-4xl md:text-6xl font-bold text-white mb-3 md:mb-5">
-              Our Team
-            </h2>
-            <p className="text-base md:text-lg font-semibold text-white">
-              Campus Ambassador Program 2023
-            </p>
-          </div>
+      <div className="p-4 max-w-screen-lg">
+        <div className="flex flex-col items-center">
+          <h2 className="pt-30 text-4xl md:text-6xl font-bold text-white mb-3 md:mb-5">
+            Our Team
+          </h2>
+          <p className="text-base md:text-lg font-semibold text-white">
+            Campus Ambassador Program 2023
+          </p>
+        </div>
 
-          <div
-            className={`mt-5 flex flex-wrap justify-center ${
-              activeCategory !== "Leadership" ? "mt-4" : ""
+        <div
+          className={`mt-5 flex flex-wrap justify-center ${
+            activeCategory !== "Leadership" ? "mt-4" : ""
+          }`}
+        >
+          {/* Adjust margin for mobile and larger screens */}
+          <button
+            className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
+              activeCategory === "Leadership"
+                ? "bg-lime-500 text-white"
+                : "bg-white text-blue-950"
             }`}
+            onClick={() => handleCategoryClick("Leadership")}
           >
-            {/* Adjust margin for mobile and larger screens */}
-            <button
-              className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
-                activeCategory === "Leadership"
-                  ? "bg-lime-500 text-white"
-                  : "bg-white text-blue-950"
-              }`}
-              onClick={() => handleCategoryClick("Leadership")}
-            >
-              Leadership
-            </button>
-         
-            <button
-              className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
-                activeCategory === "Regional Co-ordinators"
-                  ? "bg-lime-500 text-white"
-                  : "bg-white text-blue-950"
-              }`}
-              onClick={() => handleCategoryClick("Regional Co-ordinators")}
-            >
-              Regional Coordinators
-            </button>
-          </div>
+            Leadership
+          </button>
 
-          <div className="sm:grid grid-cols-1 md:flex flex-wrap justify-center mt-4">
-            {/* Render team members based on the active category */}
-            {activeCategory === "Leadership" && (
-              <>
-                <IndividualTeamMember
-                  Name={KatelynYueObject.Name}
-                  Position={KatelynYueObject.Position}
-                  TeamImage={KatelynYueObject.TeamImage}
-                  Specialization={KatelynYueObject.Specialization}
-                  Gmail={KatelynYueObject.Gmail}
-                  LinkedIn={KatelynYueObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={AzaadOmerObject.Name}
-                  Position={AzaadOmerObject.Position}
-                  TeamImage={AzaadOmerObject.TeamImage}
-                  Specialization={AzaadOmerObject.Specialization}
-                  Gmail={AzaadOmerObject.Gmail}
-                  LinkedIn={AzaadOmerObject.LinkedIn}
-                  
-                />
-                  <IndividualTeamMember
-                  Name={NicholasFongObject.Name}
-                  Position={NicholasFongObject.Position}
-                  TeamImage={NicholasFongObject.TeamImage}
-                  Specialization={NicholasFongObject.Specialization}
-                  Gmail={NicholasFongObject.Gmail}
-                  LinkedIn={NicholasFongObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={BriannaLungObject.Name}
-                  Position={BriannaLungObject.Position}
-                  TeamImage={BriannaLungObject.TeamImage}
-                  Specialization={BriannaLungObject.Specialization}
-                  Gmail={BriannaLungObject.Gmail}
-                  LinkedIn={BriannaLungObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={ZachRaiObject.Name}
-                  Position={ZachRaiObject.Position}
-                  TeamImage={ZachRaiObject.TeamImage}
-                  Specialization={ZachRaiObject.Specialization}
-                  Gmail={ZachRaiObject.Gmail}
-                  LinkedIn={ZachRaiObject.LinkedIn}
-                />
+          <button
+            className={`font-semibold rounded-full px-2 md:px-4 py-1 md:py-2 mx-1 md:mx-2 ${
+              activeCategory === "Regional Co-ordinators"
+                ? "bg-lime-500 text-white"
+                : "bg-white text-blue-950"
+            }`}
+            onClick={() => handleCategoryClick("Regional Co-ordinators")}
+          >
+            Regional Coordinators
+          </button>
+        </div>
 
-                <IndividualTeamMember
-                  Name={MichellePengObject.Name}
-                  Position={MichellePengObject.Position}
-                  TeamImage={MichellePengObject.TeamImage}
-                  Specialization={MichellePengObject.Specialization}
-                  Gmail={MichellePengObject.Gmail}
-                  LinkedIn={MichellePengObject.LinkedIn}
-                />
-              </>
-            )}
-          
-            {activeCategory === "Regional Co-ordinators" && (
-              <>
-                <IndividualTeamMember
-                  Name={SimarDhillonObject.Name}
-                  Position={SimarDhillonObject.Position}
-                  TeamImage={SimarDhillonObject.TeamImage}
-                  Specialization={SimarDhillonObject.Specialization}
-                  Gmail={SimarDhillonObject.Gmail}
-                  LinkedIn={SimarDhillonObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={HaleyCorcoranObject.Name}
-                  Position={HaleyCorcoranObject.Position}
-                  TeamImage={HaleyCorcoranObject.TeamImage}
-                  Specialization={HaleyCorcoranObject.Specialization}
-                  Gmail={HaleyCorcoranObject.Gmail}
-                  LinkedIn={HaleyCorcoranObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={AmyYinObject.Name}
-                  Position={AmyYinObject.Position}
-                  TeamImage={AmyYinObject.TeamImage}
-                  Specialization={AmyYinObject.Specialization}
-                  Gmail={AmyYinObject.Gmail}
-                  LinkedIn={AmyYinObject.LinkedIn}
-                  Intended={true}
-                />
-                <IndividualTeamMember
-                  Name={AshvikaAhujaObject.Name}
-                  Position={AshvikaAhujaObject.Position}
-                  TeamImage={AshvikaAhujaObject.TeamImage}
-                  Specialization={AshvikaAhujaObject.Specialization}
-                  Gmail={AshvikaAhujaObject.Gmail}
-                  LinkedIn={AshvikaAhujaObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={AustinCuObject.Name}
-                  Position={AustinCuObject.Position}
-                  TeamImage={AustinCuObject.TeamImage}
-                  Specialization={AustinCuObject.Specialization}
-                  Gmail={AustinCuObject.Gmail}
-                  LinkedIn={AustinCuObject.LinkedIn}
-                  Intended={true}
-                />
-                <IndividualTeamMember
-                  Name={HannahLeeObject.Name}
-                  Position={HannahLeeObject.Position}
-                  TeamImage={HannahLeeObject.TeamImage}
-                  Specialization={HannahLeeObject.Specialization}
-                  Gmail={HannahLeeObject.Gmail}
-                  LinkedIn={HannahLeeObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={NainikaSanghviObject.Name}
-                  Position={NainikaSanghviObject.Position}
-                  TeamImage={NainikaSanghviObject.TeamImage}
-                  Specialization={NainikaSanghviObject.Specialization}
-                  Gmail={NainikaSanghviObject.Gmail}
-                  LinkedIn={NainikaSanghviObject.LinkedIn}
-                />
-                <IndividualTeamMember
-                  Name={SarahYangObject.Name}
-                  Position={SarahYangObject.Position}
-                  TeamImage={SarahYangObject.TeamImage}
-                  Specialization={SarahYangObject.Specialization}
-                  Gmail={SarahYangObject.Gmail}
-                  LinkedIn={SarahYangObject.LinkedIn}
-                  Intended={true}
-                />
-              </>
-            )}
+        <div className="sm:grid grid-cols-1 md:flex flex-wrap justify-center mt-4">
+          {/* Render team members based on the active category */}
+          {activeCategory === "Leadership" && (
+            <>
+              <IndividualTeamMember
+                Name={KatelynYueObject.Name}
+                Position={KatelynYueObject.Position}
+                TeamImage={KatelynYueObject.TeamImage}
+                Specialization={KatelynYueObject.Specialization}
+                Gmail={KatelynYueObject.Gmail}
+                LinkedIn={KatelynYueObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={AzaadOmerObject.Name}
+                Position={AzaadOmerObject.Position}
+                TeamImage={AzaadOmerObject.TeamImage}
+                Specialization={AzaadOmerObject.Specialization}
+                Gmail={AzaadOmerObject.Gmail}
+                LinkedIn={AzaadOmerObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={NicholasFongObject.Name}
+                Position={NicholasFongObject.Position}
+                TeamImage={NicholasFongObject.TeamImage}
+                Specialization={NicholasFongObject.Specialization}
+                Gmail={NicholasFongObject.Gmail}
+                LinkedIn={NicholasFongObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={BriannaLungObject.Name}
+                Position={BriannaLungObject.Position}
+                TeamImage={BriannaLungObject.TeamImage}
+                Specialization={BriannaLungObject.Specialization}
+                Gmail={BriannaLungObject.Gmail}
+                LinkedIn={BriannaLungObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={ZachRaiObject.Name}
+                Position={ZachRaiObject.Position}
+                TeamImage={ZachRaiObject.TeamImage}
+                Specialization={ZachRaiObject.Specialization}
+                Gmail={ZachRaiObject.Gmail}
+                LinkedIn={ZachRaiObject.LinkedIn}
+              />
+
+              <IndividualTeamMember
+                Name={MichellePengObject.Name}
+                Position={MichellePengObject.Position}
+                TeamImage={MichellePengObject.TeamImage}
+                Specialization={MichellePengObject.Specialization}
+                Gmail={MichellePengObject.Gmail}
+                LinkedIn={MichellePengObject.LinkedIn}
+              />
+            </>
+          )}
+
+          {activeCategory === "Regional Co-ordinators" && (
+            <>
+              <IndividualTeamMember
+                Name={SimarDhillonObject.Name}
+                Position={SimarDhillonObject.Position}
+                TeamImage={SimarDhillonObject.TeamImage}
+                Specialization={SimarDhillonObject.Specialization}
+                Gmail={SimarDhillonObject.Gmail}
+                LinkedIn={SimarDhillonObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={HaleyCorcoranObject.Name}
+                Position={HaleyCorcoranObject.Position}
+                TeamImage={HaleyCorcoranObject.TeamImage}
+                Specialization={HaleyCorcoranObject.Specialization}
+                Gmail={HaleyCorcoranObject.Gmail}
+                LinkedIn={HaleyCorcoranObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={AmyYinObject.Name}
+                Position={AmyYinObject.Position}
+                TeamImage={AmyYinObject.TeamImage}
+                Specialization={AmyYinObject.Specialization}
+                Gmail={AmyYinObject.Gmail}
+                LinkedIn={AmyYinObject.LinkedIn}
+                Intended={true}
+              />
+              <IndividualTeamMember
+                Name={AshvikaAhujaObject.Name}
+                Position={AshvikaAhujaObject.Position}
+                TeamImage={AshvikaAhujaObject.TeamImage}
+                Specialization={AshvikaAhujaObject.Specialization}
+                Gmail={AshvikaAhujaObject.Gmail}
+                LinkedIn={AshvikaAhujaObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={AustinCuObject.Name}
+                Position={AustinCuObject.Position}
+                TeamImage={AustinCuObject.TeamImage}
+                Specialization={AustinCuObject.Specialization}
+                Gmail={AustinCuObject.Gmail}
+                LinkedIn={AustinCuObject.LinkedIn}
+                Intended={true}
+              />
+              <IndividualTeamMember
+                Name={HannahLeeObject.Name}
+                Position={HannahLeeObject.Position}
+                TeamImage={HannahLeeObject.TeamImage}
+                Specialization={HannahLeeObject.Specialization}
+                Gmail={HannahLeeObject.Gmail}
+                LinkedIn={HannahLeeObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={NainikaSanghviObject.Name}
+                Position={NainikaSanghviObject.Position}
+                TeamImage={NainikaSanghviObject.TeamImage}
+                Specialization={NainikaSanghviObject.Specialization}
+                Gmail={NainikaSanghviObject.Gmail}
+                LinkedIn={NainikaSanghviObject.LinkedIn}
+              />
+              <IndividualTeamMember
+                Name={SarahYangObject.Name}
+                Position={SarahYangObject.Position}
+                TeamImage={SarahYangObject.TeamImage}
+                Specialization={SarahYangObject.Specialization}
+                Gmail={SarahYangObject.Gmail}
+                LinkedIn={SarahYangObject.LinkedIn}
+                Intended={true}
+              />
+            </>
+          )}
         </div>
       </div>
     </div>
