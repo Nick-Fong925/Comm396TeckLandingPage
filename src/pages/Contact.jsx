@@ -68,9 +68,9 @@ function Contact() {
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-lime-400">
           Contact Us
         </h1>
-        <h2 className="text-white text-base md:text-m leading-8 mt-4 ">
+        <h2 className="text-white text-base md:text-s  mt-4 ">
           Please feel free to contact us any time if you have any questions
-          about upcoming or previous events. The CAP Team is always here to
+          about upcoming or previous events. If you are interested in having presentations at your school, please let us know in you message and our team will reach out to coordinate. The CAP Team is always here to
           assist!
         </h2>
         <form className="space-y-4 mt-8" onSubmit={handleSubmit}>

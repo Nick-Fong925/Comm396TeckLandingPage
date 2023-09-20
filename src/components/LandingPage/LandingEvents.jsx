@@ -37,7 +37,7 @@ function LandingEvents() {
               />
             </a>
             <a
-              href="https://www.tiktok.com/@melonacanada"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
