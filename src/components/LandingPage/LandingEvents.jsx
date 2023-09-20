@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function LandingEvents() {
   return (
-    <div className="bg-black py-24 lg:py-16">
+    <div className="bg-gray-100  py-24 lg:py-16">
       <div className="container mx-auto px-4 md:flex flex-row items-center">
         <div className="ml-6 md:w-1/2 mr-10"> {/* Swap this with the image div */}
           <img
@@ -18,10 +18,10 @@ function LandingEvents() {
           <h1 className=" text-lime-400  font-semibold mb-2 mt-10 lg:text-xl">
             Brought to You by CAP
           </h1>
-          <h2 className="text-2xl lg:text-4xl font-medium mb-5 text-white">
+          <h2 className="text-2xl font-bold lg:text-4xl  mb-5 text-black">
             Join Us at One of Our Events
           </h2>
-          <p className="text-white">
+          <p className="text-black font-semibold">
             We host a variety of events throughout the year, whether you want to hear about industry experiences, gain case competition experience, or just come meet the team we have something for everyone. Follow us to hear about upcoming events!
           </p>
           <div className="flex space-x-4 mt-10"> {/* Move the icons here and add margin */}

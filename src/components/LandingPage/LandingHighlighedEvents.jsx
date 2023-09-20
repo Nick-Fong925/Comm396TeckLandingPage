@@ -29,14 +29,14 @@ function LandingHighlightedEvents() {
   ];
 
   return (
-    <div className="bg-black pb-20">
+    <div className="bg-gray-100 pb-20">
       <div className="flex justify-center">
         <div className="max-w-screen-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ml-10 mr-10">
             {events.map((event) => (
               <div
                 key={event.id}
-                className="bg-black rounded-lg overflow-hidden shadow-md border-4 border-lime-400"
+                className="bg-gray-100 rounded-lg overflow-hidden shadow-md border-4 border-blue-950"
               >
                 <img
                   src={event.imageUrl}
@@ -44,10 +44,10 @@ function LandingHighlightedEvents() {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h2 className="text-lg font-bold mb-2 text-lime-400">
+                  <h2 className="text-lg font-bold mb-2 text-blue-950">
                     {event.name}
                   </h2>
-                  <p className="text-white text-xs">{event.description}</p>
+                  <p className="text-black text-xs font-semibold">{event.description}</p>
                 </div>
               </div>
             ))}
