@@ -13,7 +13,7 @@ function IndividualTeamMember({
 }) {
   return (
     <div className="text-white bg-blue-950 p-14 md:w-1/2">
-      <div className="md:flex md:items-center">
+      <div className="w-full md:flex md:items-center">
         <div className="w-32 h-40 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500">
           <img
             src={TeamImage}

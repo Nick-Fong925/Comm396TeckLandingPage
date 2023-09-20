@@ -189,7 +189,7 @@ function TeamPage() {
             </button>
           </div>
 
-          <div className="flex flex-wrap justify-center mt-4">
+          <div className="sm:grid grid-cols-1 md:flex flex-wrap justify-center mt-4">
             {/* Render team members based on the active category */}
             {activeCategory === "Leadership" && (
               <>
