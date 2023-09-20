@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import CapLogo from "../assets/Header/CapLogoWhite.png";
+import instagramIcon from "../assets/socialmedia/instagram.png";
+import tiktokIcon from "../assets/socialmedia/tiktok.png";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showOurEventsDropdown, setOurEventsDropdown] = useState(false);
+
 
   // Show/hide the "About Us" dropdown
-  const handleAboutUsDropdown = () => {
-    setOurEventsDropdown(!showOurEventsDropdown);
-  };
+
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    setOurEventsDropdown(false);
+
 
     scrollToTop();
   };
@@ -137,7 +137,7 @@ function Header() {
           <svg
             className="w-6 h-6"
             fill="none"
-            stroke="currentColor"
+            stroke="white"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -156,88 +156,80 @@ function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed top-0 left-0 w-full h-full bg-blue-950 border-l border-gray-200 shadow-lg p-4 transform transition-transform duration-300 ${
-            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <button
-            className="md:hidden text-black font-bold absolute top-4 right-4"
-            onClick={toggleMobileMenu}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-          {/* Menu Items */}
-          <ul className="flex flex-col space-y-2 mt-10">
-            <li>
-              <Link
-                to="/"
-                className="text-black font-bold  hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              ></Link>
-            </li>
-            <li>
-              <Link
-                to="/TeamPage"
-                className="text-white font-bold  hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              >
-                Our Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Contact"
-                className="text-white font-bold  hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
-            <li className="relative group">
-              <button
-                className="text-white font-bold  hover:text-lime-400"
-                onClick={handleAboutUsDropdown}
-              >
-                Events
-              </button>
-              {showOurEventsDropdown && (
-                <ul className="ml-4 space-y-2">
-                  <li>
-                    <Link
-                      to="/BingStory"
-                      className="block text-white font-semibold hover:text-gray-500"
-                      onClick={toggleMobileMenu}
-                    >
-                      Upcoming Evemts
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/MelonaStory"
-                      className="block text-white font-semibold hover:text-gray-500"
-                      onClick={toggleMobileMenu}
-                    >
-                      Past Events
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-          </ul>
-        </div>
+  className={`md:hidden fixed top-0 left-0 w-full h-full bg-blue-950 border-l border-gray-200 shadow-lg p-4 transform transition-transform duration-300 ${
+    mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+  }`}
+>
+  <button
+    className="md:hidden text-black font-bold absolute top-4 right-4"
+    onClick={toggleMobileMenu}
+  >
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="white"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M6 18L18 6M6 6l12 12"
+      ></path>
+    </svg>
+  </button>
+  {/* Menu Items */}
+  <ul className="flex flex-col space-y-4 mt-10 text-center">
+    <li>
+      <Link
+        to="/"
+        className="text-white font-bold text-xl hover:text-lime-400"
+        onClick={toggleMobileMenu}
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/TeamPage"
+        className="text-white font-bold text-xl hover:text-lime-400"
+        onClick={toggleMobileMenu}
+      >
+        Our Team
+      </Link>
+    </li>
+    <li>
+      <Link
+        to="/Contact"
+        className="text-white font-bold text-xl hover:text-lime-400"
+        onClick={toggleMobileMenu}
+      >
+        Contact Us
+      </Link>
+    </li>
+  </ul>
+  
+  {/* Centered Icons */}
+  <div className="flex justify-center mt-4 gap-6">
+    <a
+      href="https://www.instagram.com/ubcsaudercap/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={instagramIcon} alt="Instagram Icon" className="w-6 h-6" />
+    </a>
+    <a
+      href=""
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src={tiktokIcon} alt="TikTok Icon" className="w-6 h-6" />
+    </a>
+  </div>
+</div>
+
+
       </nav>
     </header>
   );
