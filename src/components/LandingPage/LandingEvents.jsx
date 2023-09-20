@@ -44,7 +44,7 @@ function LandingEvents() {
               <img src={tiktokIcon} alt="tiktok" className="w-8 h-8 mb-5" />
             </a>
           </div>
-          <Link className="mt-10 text-white underline text-s" to="/Contact">Get Connected</Link>
+          <Link className="mt-10 text-lime-400 font-bold text-s hover:underline" to="/Contact">Get Connected</Link>
         </div>
       </div>
     </div>

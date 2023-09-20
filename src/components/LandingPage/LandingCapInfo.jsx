@@ -12,7 +12,7 @@ function LandingCapInfo() {
         />
       </div>
 
-      <p className="ml-10 text-3xl font-bold">
+      <p className="ml-10 md:text-2xl font-bold lg:text-3xl">
         Students Helping Students <span style={{ color: '#a3e635' }}>Since 2020</span>
       </p>
     </div>

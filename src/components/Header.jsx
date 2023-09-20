@@ -89,10 +89,28 @@ function Header() {
             )}
           </li>
             */}
+             <li className="relative group group-hover:block">
+            <Link
+              to="/TeamPage"
+              className="text-white font-extrabold  hover:text-lime-400 text-xs"
+              onClick={scrollToTop}
+            >
+              EVENTS
+            </Link>
+          </li>
           <li className="relative group group-hover:block">
             <Link
               to="/TeamPage"
-              className="text-white font-extrabold  hover:text-lime-400"
+              className="text-white font-extrabold  hover:text-lime-400 text-xs"
+              onClick={scrollToTop}
+            >
+              MISSION
+            </Link>
+          </li>
+          <li className="relative group group-hover:block">
+            <Link
+              to="/TeamPage"
+              className="text-white font-extrabold  hover:text-lime-400 text-xs"
               onClick={scrollToTop}
             >
               OUR TEAM
@@ -101,7 +119,7 @@ function Header() {
           <li className="relative group group-hover:block">
             <Link
               to="/Contact"
-              className="text-white font-extrabold  hover:text-lime-400 md:mr-10"
+              className="text-white font-extrabold  hover:text-lime-400 text-xs md:mr-10"
               onClick={scrollToTop}
             >
               CONTACT US

@@ -73,14 +73,14 @@ function Footer() {
   */}
           <Link
             to="/TeamPage"
-            className="font-extrabold text-white hover:text-green-400 text-xs lg:text-xl"
+            className="font-extrabold text-xs text-white hover:text-green-400 "
             onClick={scrollToTop}
           >
             TEAM
           </Link>
           <Link
             to="/Contact"
-            className="font-extrabold text-white hover:text-green-400 text-xs lg:text-xl"
+            className="font-extrabold text-xs text-white hover:text-green-400"
             onClick={scrollToTop}
           >
             CONTACT

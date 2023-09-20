@@ -62,7 +62,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-28 flex flex-col md:flex-row bg-blue-950">
+    <div className="min-h-screen pt-28 flex flex-col md:flex-row bg-blue-950 -mb-28">
       {/* Contact Form section */}
       <div className="w-full md:w-1/2 bg-blue-950 p-8">
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-wider text-lime-400">
