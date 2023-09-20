@@ -9,12 +9,12 @@ function LandingHighlightedEvents() {
       id: 1,
       name: "Q & A",
       description:
-        "The Campus Ambassador Program is launching a brand new event to help applicants answer all their inquiries. Prospective applicants can attend our virtual Information and Q&A sessions with our panelists from various backgrounds. We will have a plethora of students with unique backgrounds to share their journey to Sauder and answer any of your questions! We welcome all students interested in Sauder to attend.",
+        "The Campus Ambassador Program is launching a new event to help applicants answer inquiries. Prospective applicants can attend our virtual Information and Q&A sessions with our panelists from various backgrounds. We will have a plethora of students with unique backgrounds to share their journey to Sauder and answer any of your questions! We welcome all students interested in Sauder to attend.",
       imageUrl: QandA,
     },
     {
       id: 2,
-      name: "Business Fundamentals workshop",
+      name: "Business Fundamentals Workshop",
       description:
         "CAP hosts a Business Fundamentals workshop that introduces attendees to the world of business and professional development, gives them a great opportunity to network with one another, and informs them about the many options that are available to UBC Sauder students post-graduation.",
       imageUrl: Workshop,
