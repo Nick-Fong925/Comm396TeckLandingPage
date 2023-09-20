@@ -91,7 +91,7 @@ function Header() {
             */}
              <li className="relative group group-hover:block">
             <Link
-              to="/TeamPage"
+              to="/"
               className="text-white font-extrabold  hover:text-lime-400 text-xs"
               onClick={scrollToTop}
             >
@@ -100,7 +100,7 @@ function Header() {
           </li>
           <li className="relative group group-hover:block">
             <Link
-              to="/TeamPage"
+              to="/"
               className="text-white font-extrabold  hover:text-lime-400 text-xs"
               onClick={scrollToTop}
             >
