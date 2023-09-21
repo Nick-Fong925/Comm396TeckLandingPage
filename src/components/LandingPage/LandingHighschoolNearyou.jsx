@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,17 +57,14 @@ function StoreScrollBar() {
   return (
     <div>
       <div className="mt-4 text-center md:mt-10">
-      <h1 className=" text-xl font-bold mb-10 md:text-3xl">
-    Coming to a <span className="text-lime-400">Highschool</span> Near you
-    </h1>
+        <h1 className=" text-xl font-bold mb-10 md:text-3xl">
+          Coming to a <span className="text-lime-400">Highschool</span> Near you
+        </h1>
       </div>
       <div className="z-10 p-2 mt-2 mb-2 md:p-4 md:mt-4 md:mb-10">
         <Slider {...settings} ref={sliderRef}>
           {images.map((image, index) => (
-            <div
-              key={index}
-              className="text-center"
-            >
+            <div key={index} className="text-center">
               <img
                 src={image}
                 alt={`${index}`}
