@@ -15,7 +15,7 @@ function LandingHighlightedEvents() {
       id: 2,
       name: "Business Fundamentals Workshop",
       description:
-        "CAP hosts a Business Fundamentals workshop that introduces attendees to the world of business and professional development, gives them a great opportunity to network with one another, and informs them about the many options that are available to UBC Sauder students post-graduation.",
+        "CAP hosts a Business Fundamentals workshop that introduces attendees to the world of business and professional development, gives them a great opportunity to network with one another, and informs them about the many options that are available to UBC Sauder students post-graduation. This workshop is hosted by experienced students and members of the career centre to provide a diverse range of knowledge for attendees.",
       imageUrl: Workshop,
     },
     {

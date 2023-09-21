@@ -44,7 +44,7 @@ function TeamPage() {
     Name: "Ashvika Ahuja",
     Position: "Regional Coordinator",
     TeamImage: AshvikaAhuja,
-    Specialization: "",
+    Specialization: "Marketing",
     Gmail: "ashvika@gmail.com",
     LinkedIn: "https://www.linkedin.com/in/ashvikaahuja/",
   };
