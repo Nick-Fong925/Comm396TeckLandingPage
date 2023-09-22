@@ -1,4 +1,3 @@
-
 import QandA from "../../assets/EventsPhotos/Event1Photo.jpg";
 import CaseCompetition from "../../assets/EventsPhotos/Event2Photo.jpg";
 import Workshop from "../../assets/EventsPhotos/Event3Photo.jpg";
@@ -16,7 +15,7 @@ function LandingHighlightedEvents() {
       id: 2,
       name: "Business Fundamentals Workshop",
       description:
-        "CAP hosts a Business Fundamentals workshop that introduces attendees to the world of business and professional development, gives them a great opportunity to network with one another, and informs them about the many options that are available to UBC Sauder students post-graduation.",
+        "CAP hosts a Business Fundamentals workshop that introduces attendees to the world of business and professional development, gives them a great opportunity to network with one another, and informs them about the many options that are available to UBC Sauder students post-graduation. This workshop is hosted by experienced students and members of the career centre to provide a diverse range of knowledge for attendees.",
       imageUrl: Workshop,
     },
     {
@@ -32,7 +31,7 @@ function LandingHighlightedEvents() {
     <div className="bg-gray-100 pb-20">
       <div className="flex justify-center">
         <div className="max-w-screen-lg">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ml-10 mr-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ml-10 mr-10">
             {events.map((event) => (
               <div
                 key={event.id}
@@ -47,7 +46,9 @@ function LandingHighlightedEvents() {
                   <h2 className="text-lg font-bold mb-2 text-blue-950">
                     {event.name}
                   </h2>
-                  <p className="text-black text-xs font-semibold">{event.description}</p>
+                  <p className="text-black text-xs font-semibold">
+                    {event.description}
+                  </p>
                 </div>
               </div>
             ))}
