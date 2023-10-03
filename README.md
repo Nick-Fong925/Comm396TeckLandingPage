@@ -1,5 +1,7 @@
 # UBC Campus Ambassador Program Website
 
+![CAP](https://github.com/Nick-Fong925/CAPWeb/assets/120824415/6f78190a-ecb6-4b3c-bccd-254dc07c5ac5)
+
 Welcome to the official website of the Campus Ambassador Program for UBC. For all future directors of technology, I hope that this READ.ME will assist in navigating and editing our current website.
 
 # Features
