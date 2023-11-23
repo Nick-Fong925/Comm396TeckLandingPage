@@ -60,14 +60,14 @@ function Footer() {
           <div className="flex flex-col items-center md:flex-row space-y-2 md:space-y-0 md:space-x-4">
             <Link
               to="/TeamPage"
-              className="font-extrabold text-xs text-white hover:text-green-400"
+              className="font-extrabold text-m text-white hover:text-green-400 md:text-xs lg:mr-10 lg:text-lg"
               onClick={scrollToTop}
             >
               TEAM
             </Link>
             <Link
               to="/Contact"
-              className="font-extrabold text-xs text-white hover:text-green-400"
+              className="font-extrabold text-m text-white hover:text-green-400 md:text-xs lg:text-lg"
               onClick={scrollToTop}
             >
               CONTACT
@@ -86,7 +86,7 @@ function Footer() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className=" text-base border-2 w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black text-gray-800 py-1 md:mr-2"
+                className="pl-2 text-base border-2 border-white w-full hover:border-lime-400 focus:border-lime-400 rounded-lg focus:outline-none border-black text-gray-800 py-1 md:mr-2"
                 placeholder="Email"
                 required
               />
