@@ -109,7 +109,7 @@ function Footer() {
                 <img src={instagramIcon} alt="Instagram Icon" className="w-6 h-6" />
               </a>
               <a
-                href=""
+                href="https://www.tiktok.com/@ubcsaudercap?_t=8haYzMAC60j&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
               >

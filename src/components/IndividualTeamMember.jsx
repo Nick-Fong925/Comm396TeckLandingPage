@@ -14,7 +14,7 @@ function IndividualTeamMember({
   return (
     <div className="text-white bg-blue-950 p-14 md:w-1/2">
       <div className="w-full md:flex md:items-center">
-        <div className="h-20 w-36 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500 md:h-44 lg:w-40 lg:h-52">
+        <div className="h-20 w-36 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500 md:h-44 lg:w-40 h-52 lg:h-52">
           <img
             src={TeamImage}
             alt={`${Name}'s Profile`}
