@@ -14,11 +14,11 @@ function IndividualTeamMember({
   return (
     <div className="text-white bg-blue-950 p-14 md:w-1/2">
       <div className="w-full md:flex md:items-center">
-        <div className="w-32 h-40 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500">
+        <div className="h-20 w-36 rounded-2xl overflow-hidden md:mr-4 hover: border-2 border-lime-500 md: h-30 lg:w-40 h-52">
           <img
             src={TeamImage}
             alt={`${Name}'s Profile`}
-            className="w-full h-full object-cover"
+            className="w-full h-full lg:object-fit"
           />
         </div>
         <div className="md:w-3/4 mt-4 md:mt-0">
