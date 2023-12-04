@@ -1,21 +1,23 @@
-import LandingMission from "../components/LandingPage/LandingMission";
-import LandingEvents from "../components/LandingPage/LandingEvents";
-import LandingCapInfo from "../components/LandingPage/LandingCapInfo";
-import HeaderImage from '../components/LandingPage/HeaderImage';
-import LandingHighlightedEvents from "../components/LandingPage/LandingHighlighedEvents";
-import LandingHighSchoolNearyou from "../components/LandingPage/LandingHighschoolNearyou";
+import footer from "../assets/footer.png";
+import ContactUs from "../assets/ContactUs.png";
+import ourStories from "../assets/ourStories.png";
+import Members from "../assets/Members.png";
+import Sustainability from "../assets/Sustainability.png";
+import Operations from "../assets/Operations.png";
+import LandingPageImage from "../components/LandingPageImage";
+
 function Landing() {
   return (
-  <>
-  <HeaderImage/>
-
-  <LandingMission />
-  
-  <LandingHighSchoolNearyou/>
-  <LandingCapInfo/>
-  <LandingEvents/>
-  <LandingHighlightedEvents/> 
-  </>);
+    <>
+      <LandingPageImage />
+      <img className="" src={Sustainability}></img>
+      <img className="" src={Operations}></img>
+      <img className="" src={Members}></img>
+      <img className="" src={ourStories}></img>
+      <img className="" src={ContactUs}></img>
+      <img className="" src={footer}></img>
+    </>
+  );
 }
 
 export default Landing;
