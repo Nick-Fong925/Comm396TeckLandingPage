@@ -1,15 +1,26 @@
-import mining from "../assets/mining.jpg";
+import sustainablehouse from "../assets/hero components/sustainblehouse.png";
 
 function LandingPageImage() {
   return (
     <div className="flex max-w-screen-xl mx-auto bg-white mt-20">
       {/* Image Section */}
       <div className="flex-1 flex items-center p-6">
-        <div className="text-center">
-          <div className="text-lg font-bold mb-4">
-            Creating a model for sustainable resource collection
+        <div className="text-left">
+          <div className="text-s font-bold mb-4 text-emerald-500">
+            Regulating Sustainable Resource Collection
           </div>
-          <div className="text-base text-gray-700 mb-4">Something else...</div>
+          <div className="text-black font-bold text-7xl mb-4">
+            EcoMine Monitor
+          </div>
+
+          <div className="text-s mb-4 font-semibold">
+            Your Partner for Earth-Friendly Mining! We're here to{" "}
+            <p className="text-emerald-600">
+              help governments ensure that mining is done responsibly.
+            </p>
+            With us, it's easy to keep an eye on mining activities and make sure
+            they're eco-friendly. Let's work together for a greener future!
+          </div>
 
           {/* Learn More Button */}
           <a
@@ -22,7 +33,11 @@ function LandingPageImage() {
       </div>
 
       <div className="flex-1">
-        <img className="w-full h-auto" src={mining} alt="Mining Image" />
+        <img
+          className="w-full h-auto"
+          src={sustainablehouse}
+          alt="Mining Image"
+        />
       </div>
 
       {/* Text Section */}
