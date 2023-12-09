@@ -6,12 +6,16 @@ import Sustainability from "../assets/Sustainability.png";
 import Operations from "../assets/Operations.png";
 import LandingPageImage from "../components/LandingPageImage";
 import Partners from "../components/Partners.jsx";
+import Mission from "../components/Mission.jsx";
+import Solution from "../components/Solution.jsx";
 
 function Landing() {
   return (
     <>
       <LandingPageImage />
       <Partners />
+      <Mission/>
+      <Solution/>
       <img className="" src={Sustainability}></img>
       <img className="" src={Operations}></img>
       <img className="" src={Members}></img>

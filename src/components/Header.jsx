@@ -1,195 +1,147 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isNatureNetDropdownOpen, setNatureNetDropdownOpen] = useState(false);
+  const [isNewDropdownOpen, setNewDropdownOpen] = useState(false);
 
-  // Show/hide the "About Us" dropdown
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-
-    scrollToTop();
+  const handleNatureNetMouseEnter = () => {
+    setNatureNetDropdownOpen(true);
   };
 
-  // Function to scroll to the top of the page
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleNatureNetMouseLeave = () => {
+    setNatureNetDropdownOpen(false);
   };
 
-  // Add an event listener to all links to scroll to the top
-  const addScrollToTopEventListener = () => {
-    const links = document.querySelectorAll("Link");
-
-    links.forEach((link) => {
-      link.addEventListener("click", scrollToTop);
-    });
+  const handleNewMouseEnter = () => {
+    setNewDropdownOpen(true);
   };
 
-  // Call the function when the component mounts
-  useEffect(() => {
-    addScrollToTopEventListener();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const handleNewMouseLeave = () => {
+    setNewDropdownOpen(false);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-blue-900 shadow-lg z-50">
       <nav className="container mx-auto flex items-center justify-between h-16">
         <div className="flex items-center w-1/4">
-          {/* Updated class */}
-          <Link
-            to="/"
-            className="text-black font-bold hover-animation relative"
-            onClick={scrollToTop}
-          >
+          <Link to="/" className="text-black font-bold hover-animation relative">
             <p className="text-white font-bold text-4xl ml-24">Teck</p>
           </Link>
         </div>
         {/* Desktop Navigation */}
         <ul className="hidden md:flex w-3/4 space-x-12 justify-end">
-          <li className="relative group group-hover:block">
-            <Link
-              to="/"
-              className="text-white font-extrabold text-xs"
-              onClick={scrollToTop}
-            >
+          <li className="relative group">
+            <Link to="/" className="text-white font-extrabold text-xs">
               About
             </Link>
           </li>
-
-          <li className="relative group group-hover:block">
-            <Link
-              to="/"
-              className="text-white font-extrabold text-xs"
-              onClick={scrollToTop}
-            >
+          <li className="relative group">
+            <Link to="/" className="text-white font-extrabold text-xs">
               Products
             </Link>
           </li>
-          <li className="relative group group-hover:block">
-            <Link
-              to="/"
-              className="text-white font-extrabold text-xs"
-              onClick={scrollToTop}
-            >
+          <li className="relative group">
+            <Link to="/" className="text-white font-extrabold text-xs">
               Technology
             </Link>
           </li>
-          <li className="relative group group-hover:block">
-            <Link
-              to="/"
-              className="text-white font-extrabold text-xs"
-              onClick={scrollToTop}
-            >
-              New Projects
-            </Link>
+          <li
+            className="relative group" // NatureNet dropdown
+            onMouseEnter={handleNatureNetMouseEnter}
+            onMouseLeave={handleNatureNetMouseLeave}
+          >
+            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none">
+              NatureNet
+            </button>
+            {isNatureNetDropdownOpen && (
+              <ul className="absolute rounded-lg right-2 w-40 mt-2 space-y-2 bg-blue-950 border-t border-gray-200">
+                {/* Dropdown items for NatureNet */}
+                <li>
+                  <Link to="/naturenet/item1" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Project Details
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/naturenet/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Project Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/naturenet/item3" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Articles
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/naturenet/item4" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Contact Us
+                  </Link>
+                </li>
+                {/* Add more dropdown items as needed */}
+              </ul>
+            )}
           </li>
-          <li className="relative group group-hover:block">
-            <Link
-              to="/"
-              className="text-white font-extrabold text-xs mr-10"
-              onClick={scrollToTop}
-            >
-              Careers
-            </Link>
+          <li
+            className="relative group" // New dropdown
+            onMouseEnter={handleNewMouseEnter}
+            onMouseLeave={handleNewMouseLeave}
+          >
+            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+            {isNewDropdownOpen && (
+              <ul className="absolute rounded-lg right-2 w-40 mt-2 space-y-2 bg-blue-950 border-t border-gray-200">
+                <li>
+                  <Link to="/new/item1" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Operations
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Sustainability
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    investors
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Documents and Reports
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    News
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
+                    Career
+                  </Link>
+                </li>
+                {/* Add more dropdown items as needed */}
+              </ul>
+            )}
           </li>
         </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className={`md:hidden text-black font-bold mr-10 relative ${
-            mobileMenuOpen ? "open" : ""
-          } ${mobileMenuOpen ? "close" : ""}`}
-          onClick={toggleMobileMenu}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="white"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d={
-                mobileMenuOpen
-                  ? "M6 18L18 6M6 6l12 12"
-                  : "M4 6h16M4 12h16M4 18h16"
-              }
-            ></path>
-          </svg>
-        </button>
-
-        {/* Mobile Menu */}
-        <div
-          className={`md:hidden fixed top-0 left-0 w-full h-full bg-blue-950 border-l border-gray-200 shadow-lg p-4 transform transition-transform duration-300 ${
-            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <button
-            className="md:hidden text-black font-bold absolute top-4 right-4"
-            onClick={toggleMobileMenu}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="white"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
-          {/* Menu Items */}
-          <ul className="flex flex-col space-y-4 mt-10 text-center">
-            <li>
-              <Link
-                to="/"
-                className="text-white font-bold text-xl hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/TeamPage"
-                className="text-white font-bold text-xl hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              >
-                Our Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Contact"
-                className="text-white font-bold text-xl hover:text-lime-400"
-                onClick={toggleMobileMenu}
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-
-          {/* Centered Icons */}
-          <div className="flex justify-center mt-4 gap-6">
-            <a
-              href="https://www.instagram.com/ubcsaudercap/"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-            <a href="" target="_blank" rel="noopener noreferrer"></a>
-          </div>
-        </div>
       </nav>
     </header>
   );
 }
+
 export default Header;

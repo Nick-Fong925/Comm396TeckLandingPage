@@ -10,22 +10,23 @@ function LandingPageImage() {
             Regulating Sustainable Resource Collection
           </div>
           <div className="text-black font-bold text-7xl mb-4">
-            EcoMine Monitor
+            NatureNet
           </div>
 
           <div className="text-s mb-4 font-semibold">
             Your Partner for Earth-Friendly Mining! We're here to{" "}
-            <p className="text-emerald-600">
-              help governments ensure that mining is done responsibly.
-            </p>
-            With us, it's easy to keep an eye on mining activities and make sure
+            <span className="text-emerald-600">
+              help governments ensure that mining is done responsibly.{" "}
+            </span>
+            
+             With us, it's easy to keep an eye on mining activities and make sure
             they're eco-friendly. Let's work together for a greener future!
           </div>
 
           {/* Learn More Button */}
           <a
             href="#"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md inline-block"
+            className="bg-emerald-800 text-white font-bold px-4 py-2 rounded-md inline-block"
           >
             Learn More
           </a>
