@@ -47,11 +47,11 @@ function Header() {
             </Link>
           </li>
           <li
-            className="relative group" // NatureNet dropdown
+            className="relative group"
             onMouseEnter={handleNatureNetMouseEnter}
             onMouseLeave={handleNatureNetMouseLeave}
           >
-            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none">
+            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none transition-all duration-300">
               NatureNet
             </button>
             {isNatureNetDropdownOpen && (
@@ -82,11 +82,11 @@ function Header() {
             )}
           </li>
           <li
-            className="relative group" // New dropdown
+            className=" group"
             onMouseEnter={handleNewMouseEnter}
             onMouseLeave={handleNewMouseLeave}
           >
-            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none">
+            <button className="text-white font-extrabold text-xs border-10 border-white focus:outline-none transition-all duration-300">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -95,15 +95,15 @@ function Header() {
                 className="w-5 h-5"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h16m-7 6h7"
                 />
               </svg>
             </button>
             {isNewDropdownOpen && (
-              <ul className="absolute rounded-lg right-2 w-40 mt-2 space-y-2 bg-blue-950 border-t border-gray-200">
+              <ul className="absolute rounded-lg right-2 mt-2 space-y-2 bg-blue-950 border-t border-gray-200">
                 <li>
                   <Link to="/new/item1" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
                     Operations
@@ -116,7 +116,7 @@ function Header() {
                 </li>
                 <li>
                   <Link to="/new/item2" className="block px-4 py-2 text-white font-semibold hover:bg-blue-800">
-                    investors
+                    Investors
                   </Link>
                 </li>
                 <li>
@@ -145,3 +145,4 @@ function Header() {
 }
 
 export default Header;
+
