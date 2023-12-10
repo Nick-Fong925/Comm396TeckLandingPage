@@ -13,10 +13,10 @@ function Partners() {
       <div className="grid grid-cols-3 gap-12">
         {/* Klue */}
         <div className="flex flex-col items-center rounded-2xl overflow-hidden  bg-sky-100 p-5 ml-10">
-          <img src={klue} alt="Klue" className="w-auto h-16 ml-8" />
+          <img src={klue} alt="Klue" className="w-auto h-16 ml-24" />
           <img src={data} alt="Data" className="w-full h-40 object-contain mt-4" />
           <div className="border-b border-black mt-4 w-full"></div>
-          <div className="mt-4 text-2xl font-semibold">Sustianable Data</div>
+          <div className="mt-4 text-2xl font-semibold">Sustainable Data</div>
           <div className="mt-2 text-lg font-semibold">Providing data analysis on how sustainable initiatives affect mining operations.</div>
         </div>
 
